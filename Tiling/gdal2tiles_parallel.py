@@ -1244,7 +1244,7 @@ class GDAL2Tiles(object):
 
                         # set NODATA_VALUE metadata
                         self.out_ds.SetMetadataItem(
-                            'NODATA_VALUES', '%i %i %i' %
+                            'NODATA_VALUES', '%i' %
                             (self.in_nodata[0])) #, self.in_nodata[1],self.in_nodata[2]))   #sbs for greyscale single band image
 
                         if self.options.verbose:
