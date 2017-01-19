@@ -60,13 +60,17 @@ from math import pi, tan, log, exp, atan, ceil, log10
 from multiprocessing import cpu_count, Pool, Process, Queue
 from optparse import OptionParser, OptionGroup
 
-try:
-    from osgeo import gdal, osr
-except:
-    import gdal
-    print(
-        'You are using "old gen" bindings. gdal2tiles needs "new gen" bindings.')
-    exit(1)
+#try:
+#    from osgeo import gdal, osr
+#except:
+#    import gdal
+#    print(
+#        'You are using "old gen" bindings. gdal2tiles needs "new gen" bindings.')
+#    exit(1)
+import sys
+gdal_root = '/Users/shaystrong/Documents/gdal21/gdal/gdal/swig/python'
+sys.path.insert(0, gdal_root)
+import gdal,osr
 
 try:
     from PIL import Image
